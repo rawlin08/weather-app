@@ -55,7 +55,7 @@ import { SidebarComponent } from '../sidebar/sidebar.component';
               <div *ngFor="let data of this.app.hourly">
                 <h3>{{ data.time == this.app.hourly[0].time ? 'Now' : this.app.getRidofTime(this.app.toStandardTime(data.time)) }}</h3>
                 <div>
-                  <img src="/assets/images/{{ this.app.getIsDay(data.is_day) }}/{{ this.app.getWeatherIcon(data.condition.code) }}.png" alt="">
+                  <img src="assets/images/{{ this.app.getIsDay(data.is_day) }}/{{ this.app.getWeatherIcon(data.condition.code) }}.png" alt="">
                   <p class="rainChance" *ngIf="data.chance_of_rain > 0">{{ data.chance_of_rain }}%</p>
                   <p class="snowChance" *ngIf="data.chance_of_snow > 0">{{ data.chance_of_snow }}%</p>
                 </div>
@@ -71,7 +71,7 @@ import { SidebarComponent } from '../sidebar/sidebar.component';
                 <div class="day" *ngFor="let data of this.app.weatherData.forecast.forecastday">
                   <h3>{{ data.date == this.app.weatherData.forecast.forecastday[0].date ? 'Today' : this.app.getDayofWeek(data.date) }}</h3>
                   <div class="threeDayIcon">
-                    <img src="/assets/images/day/{{ this.app.getWeatherIcon(data.day.condition.code) }}.png" alt="">
+                    <img src="assets/images/day/{{ this.app.getWeatherIcon(data.day.condition.code) }}.png" alt="">
                     <p class="rainChance" *ngIf="data.day.daily_will_it_rain == 1">{{ data.day.daily_chance_of_rain }}%</p>
                     <p class="snowChance" *ngIf="data.day.daily_will_it_snow == 1">{{ data.day.daily_chance_of_snow }}%</p>
                   </div>
