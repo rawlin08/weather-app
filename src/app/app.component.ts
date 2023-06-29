@@ -7,7 +7,7 @@ import { WeatherAPIService } from './services/weather-api.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'weather';
+  title = 'Weather App';
 
   weatherData: any = {};
   tabsData: any = [];
