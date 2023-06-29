@@ -13,7 +13,7 @@ export class WeatherAPIService {
   }
 
   searchAPI(location: string) {
-    return this.http.get(`http://api.weatherapi.com/v1/search.json?key=1202bf7d51784328b8d15326230402&q=${location}`);
+    return this.http.get(`https://api.weatherapi.com/v1/search.json?key=1202bf7d51784328b8d15326230402&q=${location}`);
   }
 
 }
