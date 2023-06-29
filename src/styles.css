@@ -69,9 +69,11 @@ app-root {
     font-size: 12px;
     font-weight: bold;
 }
+.apiInfo > p > a {
+    color: #FFF;
+}
 
 .apiInfo > p > a:visited {
-    text-decoration: none;
     color: #FFF;
 }
 
