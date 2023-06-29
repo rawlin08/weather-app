@@ -77,6 +77,10 @@ app-root {
     color: #FFF;
 }
 
+*:disabled {
+    opacity: 1;
+}
+
 .scrollable {
     height: calc(100vh - 70px);
     overflow-y: auto;
