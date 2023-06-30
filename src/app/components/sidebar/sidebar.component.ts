@@ -8,15 +8,12 @@ import { WeatherAPIService } from 'src/app/services/weather-api.service';
   <div class="sidebar" #sidebar *ngIf="this.app.innerWidth > 1428 || this.app.sidebarOpen == true">
 <!-- SETTINGS AREA -->
     <div class="settings">
-      <div>
-        <button class="settingsBttns mobile" (click)="this.closeMenu()">Close Menu</button>
-        <h3>Settings:</h3>
-      </div>
+      <button class="settingsBttn mobile" (click)="this.closeMenu()">Close Menu</button>
       <div class="settingsBttnsDiv">
-        <button class="settingsBttns" (click)="this.app.changeTemptoC()" *ngIf="this.app.weatherApp.settings.temp == 'F'">°F</button>
-        <button class="settingsBttns" (click)="this.app.changeTemptoF()" *ngIf="this.app.weatherApp.settings.temp != 'F'">°C</button>
-        <button class="settingsBttns" (click)="this.app.changeSpeedtoKPH()" *ngIf="this.app.weatherApp.settings.speed == 'MPH'">MPH</button>
-        <button class="settingsBttns" (click)="this.app.changeSpeedtoMPH()" *ngIf="this.app.weatherApp.settings.speed != 'MPH'">KPH</button>
+        <button class="settingsBttn" (click)="this.app.changeTemptoC()" *ngIf="this.app.weatherApp.settings.temp == 'F'">°F</button>
+        <button class="settingsBttn" (click)="this.app.changeTemptoF()" *ngIf="this.app.weatherApp.settings.temp != 'F'">°C</button>
+        <button class="settingsBttn" (click)="this.app.changeSpeedtoKPH()" *ngIf="this.app.weatherApp.settings.speed == 'MPH'">MPH</button>
+        <button class="settingsBttn" (click)="this.app.changeSpeedtoMPH()" *ngIf="this.app.weatherApp.settings.speed != 'MPH'">KPH</button>
       </div>
     </div>
 <!-- SIDEBAR TABS (SCROLLABLE) -->
