@@ -287,7 +287,7 @@ main {
 }
 
 .weather {
-    padding: 20px 300px;
+    padding: 30px 0;
     color: #FFF;
 }
 
@@ -438,7 +438,7 @@ input[type='search'] {
 .day {
     display: grid;
     gap: 10px;
-    grid-template-columns: 1fr 1fr 4fr;
+    grid-template-columns: 0fr 1fr 4fr;
     align-items: center;
     border-top: 1px solid #68637B;
     padding: 15px 0;
