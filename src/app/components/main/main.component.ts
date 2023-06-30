@@ -27,8 +27,8 @@ import { SidebarComponent } from '../sidebar/sidebar.component';
     <div class="controls">
       <button class="mobile" (click)="this.sidebar.openMenu()">Menu</button>
       <div>
-        <button class="addBttn" *ngIf="this.app.locationSaved == false && this.app.weatherApp.currentTab != []" (click)="this.app.saveLocation(this.app.weatherData.location.name, this.app.weatherData.location.region)">+ Add</button>
-        <button class="deleteBttn" *ngIf="this.app.locationSaved == true" (click)="this.app.deleteLocation(this.app.weatherData.location.name, this.app.weatherData.location.region)">x Delete</button>
+        <button class="addBttn" *ngIf="this.app.locationSaved == false && this.app.weatherApp.currentTab != []" (click)="this.app.saveLocation(this.app.weatherData.location.name, this.app.weatherData.location.region)">Add</button>
+        <button class="deleteBttn" *ngIf="this.app.locationSaved == true" (click)="this.app.deleteLocation(this.app.weatherData.location.name, this.app.weatherData.location.region)">Delete</button>
         <button (click)="this.app.openDialog(searchModal, searchInput)">Search</button>
       </div>
     </div>
