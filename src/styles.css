@@ -1,3 +1,4 @@
+/* BOILERPLATE */
 :root {
     --color-sidebar-background: #2E2C2C;
     --color-tab-background: hsla(234, 27%, 23%, 100);
@@ -7,19 +8,15 @@
     --weatherTabColor: #727C99;
     --tab-gap: 10px;
 }
-
 html {
     font-family: Helvetica;
 }
-
 body, h1, h2, h3, p {
     margin: 0;
 }
-
 button {
     cursor: pointer;
 }
-
 app-root {
     display: grid;
     grid-template-columns: 1fr 5fr;
@@ -27,12 +24,12 @@ app-root {
 }
 
 /* SIDEBAR AREA (LEFT SIDE) */
-
 .weatherWrapper {
     display: grid;
     place-content: center;
 }
 
+/* LOADER */
 .loader {
     border: 16px solid #f3f3f3;
     border-radius: 50%;
@@ -43,15 +40,113 @@ app-root {
     animation: spin 2s linear infinite;
     margin: 100px 0 0 0;
 }
-
 @-webkit-keyframes spin {
     0% { -webkit-transform: rotate(0deg); }
     100% { -webkit-transform: rotate(360deg); }
 }
-  
-  @keyframes spin {
+@keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+/* RANGE SETTINGS */
+input[type=range] {
+    -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+    appearance: none;
+    width: 100%; /* Specific width is required for Firefox. */
+    background: transparent; /* Otherwise white in Chrome */
+}
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 1px solid #000000;
+    height: 15px;
+    width: 7px;
+    border-radius: 8px;
+    background: #ffffff;
+    margin-top: -4px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
+}
+input[type=range]::-moz-range-thumb {
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    border: 1px solid #000000;
+    height: 15px;
+    width: 5px;
+    border-radius: 8px;
+    background: #ffffff;
+}
+.range::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8.4px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    background: #3071a9;
+    border-radius: 2px;
+    border: 1px solid #010101;
+}
+.range::-moz-range-track {
+    width: 100%;
+    height: 5px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    background: #3071a9;
+    border-radius: 2px;
+    border: 1px solid #010101;
+}
+.aqRange, .uvRange {
+    align-self: self-end;
+    margin: 0;
+}
+.aqRange::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8.4px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    background: linear-gradient(90deg, green, yellow 15%, orange 25%, red 40%, purple 55%, maroon 70%);
+    border-radius: 1.3px;
+    border: 0.2px solid #010101;
+}
+.aqRange::-moz-range-track {
+    width: 100%;
+    height: 5px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    background: linear-gradient(90deg, green, yellow 15%, orange 25%, red 40%, purple 55%, maroon 70%);
+    border-radius: 1.3px;
+    border: 0.2px solid #010101;
+}
+.uvRange::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8.4px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    background: linear-gradient(.25turn, green, yellow 25%, orange 50%, red 66%, purple 91%);
+    border-radius: 1.3px;
+    border: 0.2px solid #010101;
+}
+.uvRange::-moz-range-track {
+    width: 100%;
+    height: 5px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    background: linear-gradient(.25turn, green, yellow 25%, orange 50%, red 66%, purple 91%);
+    border-radius: 1.3px;
+    border: 0.2px solid #010101;
+}
+.sunRange::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8.4px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    background: linear-gradient(.25turn, #3071a9, yellow, #3071a9);
+    border-radius: 1.3px;
+    border: 0.2px solid #010101;
+}
+.sunRange::-moz-range-track {
+    width: 100%;
+    height: 5px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    background: linear-gradient(.25turn, #3071a9, yellow, #3071a9);
+    border-radius: 1.3px;
+    border: 0.2px solid #010101;
+}
+.sunRange {
+    margin: 0;
+}
+*:disabled {
+    opacity: 1; /* for iOS Safari */
 }
 
 .aqdesc {
@@ -75,10 +170,6 @@ app-root {
 
 .apiInfo > p > a:visited {
     color: #FFF;
-}
-
-*:disabled {
-    opacity: 1;
 }
 
 .scrollable {
@@ -203,6 +294,7 @@ input[type='search'] {
     border: none;
     padding: 7px;
     width: 100%;
+    font-size: 16px;
 }
 
 /* Top */
@@ -319,114 +411,6 @@ input[type='search'] {
     height: 100px;
 }
 
-input[type=range] {
-    -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
-    appearance: none;
-    width: 100%; /* Specific width is required for Firefox. */
-    background: transparent; /* Otherwise white in Chrome */
-}
-
-input[type=range]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    border: 1px solid #000000;
-    height: 15px;
-    width: 7px;
-    border-radius: 8px;
-    background: #ffffff;
-    margin-top: -4px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
-    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
-}
-
-.range::-webkit-slider-runnable-track {
-    width: 100%;
-    height: 8.4px;
-    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-    background: #3071a9;
-    border-radius: 2px;
-    border: 1px solid #010101;
-}
-
-input[type=range]::-moz-range-thumb {
-    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-    border: 1px solid #000000;
-    height: 15px;
-    width: 5px;
-    border-radius: 8px;
-    background: #ffffff;
-}
-
-.range::-moz-range-track {
-    width: 100%;
-    height: 5px;
-    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-    background: #3071a9;
-    border-radius: 2px;
-    border: 1px solid #010101;
-}
-
-.aqRange, .uvRange {
-    align-self: self-end;
-    margin: 0;
-}
-
-.aqRange::-webkit-slider-runnable-track {
-    width: 100%;
-    height: 8.4px;
-    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-    background: linear-gradient(90deg, green, yellow 15%, orange 25%, red 40%, purple 55%, maroon 70%);
-    border-radius: 1.3px;
-    border: 0.2px solid #010101;
-}
-
-.aqRange::-moz-range-track {
-    width: 100%;
-    height: 5px;
-    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-    background: linear-gradient(90deg, green, yellow 15%, orange 25%, red 40%, purple 55%, maroon 70%);
-    border-radius: 1.3px;
-    border: 0.2px solid #010101;
-}
-
-.uvRange::-webkit-slider-runnable-track {
-    width: 100%;
-    height: 8.4px;
-    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-    background: linear-gradient(.25turn, green, yellow 25%, orange 50%, red 66%, purple 91%);
-    border-radius: 1.3px;
-    border: 0.2px solid #010101;
-}
-
-.uvRange::-moz-range-track {
-    width: 100%;
-    height: 5px;
-    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-    background: linear-gradient(.25turn, green, yellow 25%, orange 50%, red 66%, purple 91%);
-    border-radius: 1.3px;
-    border: 0.2px solid #010101;
-}
-
-.sunRange::-webkit-slider-runnable-track {
-    width: 100%;
-    height: 8.4px;
-    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-    background: linear-gradient(.25turn, #3071a9, yellow, #3071a9);
-    border-radius: 1.3px;
-    border: 0.2px solid #010101;
-}
-
-.sunRange::-moz-range-track {
-    width: 100%;
-    height: 5px;
-    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-    background: linear-gradient(.25turn, #3071a9, yellow, #3071a9);
-    border-radius: 1.3px;
-    border: 0.2px solid #010101;
-}
-
-.sunRange {
-    margin: 0;
-}
-
 .tabMain {
     font-size: 30px;
 }
@@ -508,12 +492,12 @@ input[type=range]::-moz-range-thumb {
 dialog {
     border-radius: 8px;
     border: none;
-    margin-top: 0;
     width: 500px;
     color: #FFF;
     background-color: #484953;
     opacity: 0.9;
-    margin-top: 20px;
+    margin-top: 5px;
+    height: 50vh;
 }
 
 dialog::backdrop {
