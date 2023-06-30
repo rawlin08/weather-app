@@ -360,6 +360,7 @@ input[type='search'] {
     text-align: center;
     overflow: scroll;
     gap: 20px;
+    
 }
 
 .hourly > div > h3 {
@@ -380,7 +381,7 @@ input[type='search'] {
 }
 
 .information > .tab:nth-child(1) {
-    height: 135px;
+    height: 150px;
 }
 
 .infoBottom {
@@ -404,6 +405,7 @@ input[type='search'] {
 
 .infoBottom > div:nth-child(1) > div:nth-child(2) {
     display: grid;
+    grid-template-rows: 1fr;
     gap: 10px;
 }
 
