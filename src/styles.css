@@ -181,7 +181,8 @@ main {
     border-radius: 8px;
     border: none;
     padding: 5px 20px;
-    width: 100px;
+    width: 120px;
+    font-size: 14px;
 }
 
 .controls > div {
