@@ -245,6 +245,11 @@ input[type=range]::-moz-range-thumb {
     gap: 5px;
 }
 
+.threeDayIcon > p {
+    text-align: left;
+    margin: 0 0 0 12px;
+}
+
 /* Sidebar High Low Degrees Text */
 .tempRange > p {
     font-size: 14px;
