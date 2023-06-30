@@ -475,14 +475,15 @@ input[type='search'] {
     margin: 0 0 10px 0;
 }
 
-.settingsBttns {
+.settingsBttn {
     background-color: var(--color-sidebarTab-background);
     color: #FFF;
     font-weight: 600;
     border-radius: 8px;
     padding: 10px;
-    width: 60px;
+    width: 100px;
     border: none;
+    font-family: inherit;
 }
 
 .settings > div {
