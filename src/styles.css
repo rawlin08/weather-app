@@ -433,10 +433,12 @@ input[type='search'] {
 }
 
 .day {
-    display: flex;
-    justify-content: center;
+    display: grid;
     gap: 10px;
+    grid-template-columns: 1fr 1fr 4fr;
     align-items: center;
+    border-top: 1px solid #68637B;
+    padding: 15px 0;
 }
 
 .day > div > img {
@@ -455,7 +457,7 @@ input[type='search'] {
 .dailyLowHigh {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 10px;
 }
 
 .tabs {
