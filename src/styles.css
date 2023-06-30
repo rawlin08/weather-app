@@ -409,10 +409,6 @@ input[type='search'] {
     gap: 10px;
 }
 
-.infoBottom > div:nth-child(1) > div:nth-child(2) > .tab:nth-child(1) {
-    height: 100px;
-}
-
 .tabMain {
     font-size: 30px;
 }
