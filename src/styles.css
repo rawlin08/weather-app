@@ -530,12 +530,12 @@ dialog::backdrop {
     height: 24px;
 }
 
+/* SEARCH MODAL */
 .searchResults {
     display: grid;
     margin: 5px 0 0 0;
     gap: 5px;
 }
-
 .locationsSearched {
     width: 100%;
     text-align: left;
@@ -544,8 +544,8 @@ dialog::backdrop {
     border-radius: 8px;
     padding: 5px 10px;
     color: #FFF;
+    font-size: 14px;
 }
-
 .locationsSearched:hover {
     background-color: #0159D1;
 }
