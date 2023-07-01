@@ -44,7 +44,7 @@ export class AppComponent implements OnInit {
     if (this.weatherApp.currentTab != '') {
       this.fetching = true;
       this.api.getWeatherData(this.weatherApp.currentTab).subscribe((data) => {
-        this.weatherData = data;
+        this.weatherData = data;      
         this.weatherApp.isWeatherSearched = true;
         this.fetching = false;
         this.saveToLocalStorage();
@@ -149,23 +149,23 @@ export class AppComponent implements OnInit {
       aqdesc: ''
     }
 
-    if (code <= 50) {
+    if (code == 1) {
       aqObj.aq = 'Good';
       aqObj.aqdesc = 'Air quality is satisfactory, and air pollution poses little or no risk.';
     }
-    else if (code >= 51 && code < 100) {
+    else if (code == 2) {
       aqObj.aq = 'Moderate';
       aqObj.aqdesc = 'Air quality is acceptable. However, there may be a risk for some people, particularly those who are unusually sensitive to air pollution.';
     }
-    else if (code >= 101 && code < 150) {
+    else if (code == 3) {
       aqObj.aq = 'Unhealthy for Sensitive Groups';
       aqObj.aqdesc = 'Members of sensitive groups may experience health effects. The general public is less likely to be affected.';
     }
-    else if (code >= 151 && code < 200) {
+    else if (code == 4) {
       aqObj.aq = 'Unhealthy';
       aqObj.aqdesc = 'Some members of the general public may experience health effects; members of sensitive groups may experience more serious health effects.';
     }
-    else if (code >= 201 && code < 300) {
+    else if (code == 5) {
       aqObj.aq = 'Very Unhealthy';
       aqObj.aqdesc = 'Health alert: The risk of health effects is increased for everyone.';
     }

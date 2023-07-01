@@ -108,10 +108,10 @@ import { SidebarComponent } from '../sidebar/sidebar.component';
               <div class="tab" *ngIf="this.app.innerWidth > 1428 || this.app.innerWidth < 600">
                 <h2><svg class="infoIcon"><use href="#icon-air-quality"></use></svg>AIR QUALITY</h2>
                 <div>
-                  <p class="aq">{{ this.app.condenseTemp(app.weatherData.current.air_quality.o3) }} - {{ this.app.getAirQuality(this.app.condenseTemp(app.weatherData.current.air_quality.o3)).aq }}</p>
-                  <p class="aqdesc">{{ this.app.getAirQuality(this.app.condenseTemp(app.weatherData.current.air_quality.o3)).aqdesc }}</p>
+                  <p class="aq">{{ app.weatherData.current.air_quality[this.air] }} - {{ this.app.getAirQuality(app.weatherData.current.air_quality[this.air]).aq }}</p>
+                  <p class="aqdesc">{{ this.app.getAirQuality(app.weatherData.current.air_quality[this.air]).aqdesc }}</p>
                 </div>
-                <input min="0" max="500" [value]="this.app.condenseTemp(app.weatherData.current.air_quality.o3)" type="range" class="aqRange" disabled>
+                <input min="0" max="7" [value]="this.app.condenseTemp( app.weatherData.current.air_quality[this.air] )" type="range" class="aqRange" disabled>
               </div>
               <div class="tab">
                 <h2 *ngIf="app.weatherData.current.is_day == 0">
@@ -212,4 +212,5 @@ export class MainComponent implements OnInit {
   constructor(public app: AppComponent, public sidebar: SidebarComponent) {}
   
   ngOnInit() {}
+  air:string = "us-epa-index";
 }
