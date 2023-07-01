@@ -111,7 +111,7 @@ import { SidebarComponent } from '../sidebar/sidebar.component';
                   <p class="aq">{{ app.weatherData.current.air_quality[this.air] }} - {{ this.app.getAirQuality(app.weatherData.current.air_quality[this.air]).aq }}</p>
                   <p class="aqdesc">{{ this.app.getAirQuality(app.weatherData.current.air_quality[this.air]).aqdesc }}</p>
                 </div>
-                <input min="0" max="7" [value]="this.app.condenseTemp( app.weatherData.current.air_quality[this.air] )" type="range" class="aqRange" disabled>
+                <input min="1" max="7" [value]="this.app.condenseTemp( app.weatherData.current.air_quality[this.air] )" type="range" class="aqRange" disabled>
               </div>
               <div class="tab">
                 <h2 *ngIf="app.weatherData.current.is_day == 0">
