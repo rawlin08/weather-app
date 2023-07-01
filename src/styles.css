@@ -27,6 +27,7 @@ app-root {
 .weatherWrapper {
     display: grid;
     place-content: center;
+    padding: 0 40px;
 }
 
 /* LOADER */
@@ -354,11 +355,6 @@ input[type='search'] {
     width: 16px;
     height: 16px;
 }
-
-.information {
-    margin: 0 200px;
-}
-
 .hourly {
     display: flex;
     justify-content: space-between;
@@ -633,6 +629,9 @@ dialog::backdrop {
     }
     .mob {
         font-size: 25px;
+    }
+    .weatherWrapper {
+        padding: 0;
     }
 }
 
