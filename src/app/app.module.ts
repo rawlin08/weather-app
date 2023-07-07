@@ -9,6 +9,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { HourlyComponent } from './components/hourly/hourly.component';
 import { ThreeDayComponent } from './components/three-day/three-day.component';
 import { SmallDetailsComponent } from './components/small-details/small-details.component';
+import { GlanceComponent } from './components/glance/glance.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { SmallDetailsComponent } from './components/small-details/small-details.
     SidebarComponent,
     HourlyComponent,
     ThreeDayComponent,
-    SmallDetailsComponent
+    SmallDetailsComponent,
+    GlanceComponent
   ],
   imports: [
     BrowserModule,
