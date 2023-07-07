@@ -6,12 +6,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainComponent } from './components/main/main.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { HourlyComponent } from './components/hourly/hourly.component';
+import { ThreeDayComponent } from './components/three-day/three-day.component';
+import { SmallDetailsComponent } from './components/small-details/small-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
-    SidebarComponent
+    SidebarComponent,
+    HourlyComponent,
+    ThreeDayComponent,
+    SmallDetailsComponent
   ],
   imports: [
     BrowserModule,
