@@ -143,7 +143,6 @@ input[type=range]::-moz-range-thumb {
 
 /* COMPONENTS */
 app-glance {
-    padding: 30px 0;
     color: #FFF;
     text-align: center;
 }
@@ -153,9 +152,6 @@ app-sidebar {
     color: #FFF;
     background-color: var(--color-sidebar-background);
     padding: 10px;
-}
-app-three-day {
-    height: calc(100% - 20px);
 }
 app-small-details, app-top-two-tabs {
     display: grid;
@@ -201,10 +197,35 @@ app-small-details, app-top-two-tabs {
     height: 150px;
 }
 
+@media (min-width: 600px) {
+    app-hourly {
+        grid-column: 1 / span 2;
+    }
+    app-top-two-tabs {
+        grid-template-columns: none;
+        grid-template-rows: 1fr;
+    }
+    app-small-details {
+        grid-column: 1 / span 2;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
 @media (min-width: 1281px) {
     app-root {
         display: grid;
         grid-template-columns: 1fr 4fr;
         min-height: 100vh;
+    }
+    app-hourly {
+        grid-column: 1 / span 6;
+    }
+    app-three-day {
+        grid-column: 1 / span 2;
+    }
+    app-top-two-tabs {
+        grid-column: 3;
+    }
+    app-small-details {
+        grid-column: 4 / span 3;
     }
 }

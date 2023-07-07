@@ -35,8 +35,8 @@ import { SidebarComponent } from '../sidebar/sidebar.component';
     <div class="weatherWrapper">
       <div class="loader" *ngIf="this.app.fetching == true"></div>
       <div *ngIf="this.app.sidebarOpen == false && this.app.weatherApp.currentTab != '' && this.app.fetching == false">
+        <app-glance></app-glance>
         <div class="information" *ngIf="this.app.weatherApp.isWeatherSearched == true">
-          <app-glance></app-glance>
           <app-hourly></app-hourly>
           <app-three-day></app-three-day>
           <app-top-two-tabs></app-top-two-tabs>
@@ -66,6 +66,7 @@ import { SidebarComponent } from '../sidebar/sidebar.component';
     align-items: center;
     gap: 5px;
     justify-content: space-between;
+    margin: 0 0 20px 0;
   }
   .controls > button, .controls > div > button {
     background-color: #000;
@@ -89,6 +90,7 @@ import { SidebarComponent } from '../sidebar/sidebar.component';
   .information {
     display: grid;
     gap: 10px;
+    margin: 20px 0 0 0;
   }
   .aqdesc {
     font-size: 14px;
@@ -180,12 +182,20 @@ import { SidebarComponent } from '../sidebar/sidebar.component';
       background-color: #0159D1;
     }
   }
+  @media (min-width: 600px) {
+    .information {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
   @media (min-width: 1281px) {
     .controls {
       justify-content: flex-end;
     }
     .weatherWrapper {
       padding: 0 40px;
+    }
+    .information {
+      grid-template-columns: repeat(6, 1fr);
     }
   }
   `]

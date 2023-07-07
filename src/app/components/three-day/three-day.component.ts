@@ -25,8 +25,12 @@ import { AppComponent } from 'src/app/app.component';
   h3 {
     margin: 0;
   }
+  .tab {
+    height: calc(100% - 20px);
+  }
   .threeDayIcon {
     display: grid;
+    place-content: center;
   }
   .threeDayIcon > p {
     text-align: left;
