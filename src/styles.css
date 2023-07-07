@@ -157,7 +157,7 @@ app-sidebar {
 app-three-day {
     height: calc(100% - 20px);
 }
-app-small-details {
+app-small-details, app-top-two-tabs {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
@@ -207,8 +207,4 @@ app-small-details {
         grid-template-columns: 1fr 4fr;
         min-height: 100vh;
     }
-}
-
-@media (max-width: 600px) {
-    
 }

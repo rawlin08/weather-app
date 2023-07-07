@@ -10,6 +10,7 @@ import { HourlyComponent } from './components/hourly/hourly.component';
 import { ThreeDayComponent } from './components/three-day/three-day.component';
 import { SmallDetailsComponent } from './components/small-details/small-details.component';
 import { GlanceComponent } from './components/glance/glance.component';
+import { TopTwoTabsComponent } from './components/top-two-tabs/top-two-tabs.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { GlanceComponent } from './components/glance/glance.component';
     HourlyComponent,
     ThreeDayComponent,
     SmallDetailsComponent,
-    GlanceComponent
+    GlanceComponent,
+    TopTwoTabsComponent
   ],
   imports: [
     BrowserModule,

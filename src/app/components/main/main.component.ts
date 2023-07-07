@@ -39,6 +39,7 @@ import { SidebarComponent } from '../sidebar/sidebar.component';
           <app-glance></app-glance>
           <app-hourly></app-hourly>
           <app-three-day></app-three-day>
+          <app-top-two-tabs></app-top-two-tabs>
           <app-small-details></app-small-details>
         </div>
         <div class="apiInfo">
