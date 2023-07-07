@@ -147,7 +147,7 @@ app-glance {
     text-align: center;
 }
 app-sidebar {
-    height: calc(100vh - 20px);
+    min-height: calc(100vh - 20px);
     display: block;
     color: #FFF;
     background-color: var(--color-sidebar-background);
