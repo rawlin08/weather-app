@@ -62,7 +62,18 @@ import { AppComponent } from 'src/app/app.component';
     <p class="tabMain">{{ app.weatherApp.settings.temp == 'F' ? app.weatherData.current.pressure_in + ' inHg' : app.weatherData.current.pressure_mb + ' mb' }}</p>
   </div>
   `,
-  styles: [``]
+  styles: [`
+  .tabMain {
+    font-size: 30px;
+  }
+  .tabSub {
+    align-self: self-end;
+    font-size: 14px;
+  }
+  .aq {
+    font-weight: bold;
+  }
+  `]
 })
 export class SmallDetailsComponent {
   constructor(public app: AppComponent) {}

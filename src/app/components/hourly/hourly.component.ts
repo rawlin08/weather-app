@@ -19,7 +19,31 @@ import { AppComponent } from 'src/app/app.component';
     </div>
   </div>
   `,
-  styles: [``]
+  styles: [`
+  .hourly {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    overflow: scroll;
+    gap: 20px;
+  }
+  .hourly > div > h3 {
+    font-size: 18px;
+  }
+
+  .hourly > div > p {
+    align-self: self-end;
+    font-size: 20px;
+  }
+
+  .hourly > div > div > img {
+    width: 50px;
+  }
+
+  .hourly > div {
+    display: grid;
+  }
+  `]
 })
 export class HourlyComponent {
   constructor(public app: AppComponent) {}

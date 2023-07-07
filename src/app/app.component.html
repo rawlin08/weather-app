@@ -1,4 +1,2 @@
 <app-sidebar *ngIf="this.innerWidth >= 1281 || this.sidebarOpen == true"></app-sidebar>
-<app-main></app-main>
-
-<router-outlet></router-outlet>
+<app-main *ngIf="this.sidebarOpen == false"></app-main>
