@@ -31,6 +31,10 @@ import { AppComponent } from 'src/app/app.component';
   .aq {
     font-weight: bold;
   }
+  .aqdesc {
+    font-size: 14px;
+    margin: 5px 0 0 0;
+  }
   `]
 })
 export class TopTwoTabsComponent {
