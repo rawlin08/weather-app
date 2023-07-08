@@ -8,7 +8,7 @@ import { WeatherAPIService } from 'src/app/services/weather-api.service';
 <!-- SETTINGS AREA -->
     <div class="settings">
       <button class="settingsBttn" (click)="this.closeMenu()" *ngIf="this.app.innerWidth < 1281">Close Menu</button>
-      <div class="settingsBttnsDiv">
+      <div>
         <button class="settingsBttn" (click)="this.app.changeTemptoC()" *ngIf="this.app.weatherApp.settings.temp == 'F'">°F</button>
         <button class="settingsBttn" (click)="this.app.changeTemptoF()" *ngIf="this.app.weatherApp.settings.temp != 'F'">°C</button>
         <button class="settingsBttn" (click)="this.app.changeSpeedtoKPH()" *ngIf="this.app.weatherApp.settings.speed == 'MPH'">MPH</button>
@@ -105,6 +105,17 @@ import { WeatherAPIService } from 'src/app/services/weather-api.service';
   .lastUpdated, .condition, .maxTemp, .minTemp {
     color: #CFCED0;
     opacity: 0.5;
+  }
+
+  @media (min-width: 1281px) {
+    .settings > div {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      width: 100%;
+    }
+    .settingsBttn {
+      width: unset;
+    }
   }
   `]
 })
